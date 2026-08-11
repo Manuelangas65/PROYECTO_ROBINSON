@@ -1,0 +1,35 @@
+name: galaga_final
+description: Proyecto final Flutter tipo Galaga con giroscopio, SQLite y sensibilidad al contexto.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  flame: ^1.38.0
+  sensors_plus: ^7.1.0
+  sqflite: ^2.4.3
+  path: ^1.9.1
+  audioplayers: ^6.8.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_launcher_icons: ^0.14.4
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/icon.png"
+
+  
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/audio/
