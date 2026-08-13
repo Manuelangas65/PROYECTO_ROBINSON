@@ -243,23 +243,23 @@ class _Hud extends StatelessWidget {
               valueListenable: game.gyroAvailableNotifier,
               builder: (_, available, __) => Row(
                 mainAxisSize: MainAxisSize.min,
-                children: [
-                  Icon(
-                    Icons.screen_rotation_alt_rounded,
-                    size: 16,
-                    color: available ? Colors.greenAccent : Colors.orangeAccent,
-                  ),
-                  const SizedBox(width: 4),
-                  Text(
-                    available
-                        ? 'Giroscopio activo'
-                        : 'Giroscopio no disponible',
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 11,
-                    ),
-                  ),
-                ],
+                // children: [
+                //   Icon(
+                //     Icons.screen_rotation_alt_rounded,
+                //     size: 16,
+                //     color: available ? Colors.greenAccent : Colors.orangeAccent,
+                //   ),
+                //   const SizedBox(width: 4),
+                //   Text(
+                //     available
+                //         ? 'Giroscopio activo'
+                //         : 'Giroscopio no disponible',
+                //     style: const TextStyle(
+                //       color: Colors.white,
+                //       fontSize: 11,
+                //     ),
+                //   ),
+                // ],
               ),
             ),
           ],

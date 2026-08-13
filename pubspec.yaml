@@ -1,6 +1,7 @@
 name: galaga_final
 description: Proyecto final Flutter tipo Galaga con giroscopio, SQLite y sensibilidad al contexto.
 publish_to: 'none'
+
 version: 1.0.0+1
 
 environment:
@@ -9,6 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
   cupertino_icons: ^1.0.8
   flame: ^1.38.0
   sensors_plus: ^7.1.0
@@ -27,9 +29,10 @@ flutter_launcher_icons:
   ios: true
   image_path: "assets/icon/icon.png"
 
-  
 flutter:
   uses-material-design: true
+
   assets:
     - assets/images/
-    - assets/audio/
+    - assets/audio/                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+    - assets/icon/

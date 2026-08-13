@@ -7,29 +7,36 @@ import 'enemy.dart';
 
 class Player extends SpriteComponent
     with HasGameReference<GalagaGame>, CollisionCallbacks {
+
   Player({required super.position})
       : super(
-          // El PNG tiene margen transparente; este tamaño hace que la nave
-          // se perciba mucho más grande en pantalla horizontal.
-          size: Vector2(118, 118),
+          size: Vector2(50, 50),
           anchor: Anchor.center,
         );
 
-  static const double movementSpeed = 500;
+  static const double movementSpeed = 390;
   double _shootCooldown = 0;
 
   @override
   Future<void> onLoad() async {
     sprite = await game.loadSprite('player.png');
+
     add(
       RectangleHitbox.relative(
-        Vector2(0.72, 0.72),
+        Vector2(0.42, 0.58),
         parentSize: size,
-        position: size * 0.14,
+
+        // La centra dentro de la nave
+        position: Vector2(
+          size.x * 0.29,
+          size.y * 0.21,
+        ),
+
         collisionType: CollisionType.active,
       ),
     );
   }
+
 
   @override
   void update(double dt) {
@@ -54,19 +61,19 @@ class Player extends SpriteComponent
   }
 
   void shoot() {
-    if (_shootCooldown > 0 || game.isGameOver) return;
+  if (_shootCooldown > 0 || game.isGameOver) return;
 
-    _shootCooldown = 0.18;
+  _shootCooldown = 0.18;
 
-    game.add(
-      PlayerBullet(
-        position: Vector2(
-          position.x,
-          position.y - (size.y / 2) - 12,
-        ),
+  game.add(
+    PlayerBullet(
+      position: Vector2(
+        position.x,
+        position.y - (size.y / 2) - 5,
       ),
-    );
-  }
+    ),
+  );
+}
 
   @override
   void onCollisionStart(
